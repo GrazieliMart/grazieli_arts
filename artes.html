@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/imgs/favicon.ico" type="image/x-icon">
+    <title>Graziel Arts | Pintura a óleo | Telas a óleo | Esculturas | Artista de tinta óleo</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Fonte clássica -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+       Graziel Arts
+    </div>
+
+    <nav>
+
+        <a href="index.html">Início</a>
+        <a href="artes.html">Artes</a>
+        <a href="quem-sou.html">Quem Sou</a>
+      
+        <a href="contato.html">Contato</a>
+        <a href="https://www.instagram.com/grazieliarts/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.youtube.com/@Grazieli_Arts" target="_blank"><i class="bi bi-youtube"></i></a>
+<a href="https://www.tiktok.com/@_grazieliarts" target="_blank"><i class="bi bi-tiktok"></i></a>
+    </nav>
+
+</header>
+<br>
+<br><br><br>
+<div class="titulo">
+<h1>Os gatitos medievais | Pinturas Pessoais</h1>
+<p>Autoral | Pintura a Óleo,10x15 cm</p>
+</div>
+<section class="galeria">
+
+
+    <img src="assets/imgs/obras/nero.jpeg" alt="Pintura a Óleo de um gato medieval">
+    <img src="assets/imgs/obras/athena.jpeg" alt="Pintura a Óleo de um gato mago">
+    <img src="assets/imgs/obras/kassadin.jpeg" alt="Pintura a Óleo de um gato cantor">
+    <img src="assets/imgs/obras/melanie.jpeg" alt="Pintura a Óleo de gata medieval">
+   
+
+    
+
+</section><div class="titulo"><h1>Pinturas pessoais</h1>
+<p>Autoral | Pintura a Óleo,10x15 cm</p></div>
+<section class="galeria">
+
+
+    <img src="assets/imgs/obras/novo-dia.jpeg" alt="Pintura a Óleo">
+ 
+    <img src="assets/imgs/obras/pequeno-amor.jpeg" alt="Pintura a Óleo">
+ 
+   
+
+    
+
+</section>
+
+
+
+<div id="lightbox" class="lightbox">
+
+    <span class="fechar">&times;</span>
+
+    <img id="imagemExpandida">
+
+</div>
+<script>
+    const lightbox = document.getElementById("lightbox");
+const imagem = document.getElementById("imagemExpandida");
+
+document.querySelectorAll(".galeria img").forEach(foto=>{
+
+    foto.addEventListener("click",()=>{
+
+        imagem.src = foto.src;
+
+        lightbox.style.display="flex";
+
+    });
+
+});
+
+document.querySelector(".fechar").onclick=()=>{
+
+    lightbox.style.display="none";
+
+}
+
+lightbox.onclick=(e)=>{
+
+    if(e.target===lightbox){
+
+        lightbox.style.display="none";
+
+    }
+
+}
+</script>
+<!--<main class="catalogo">
+
+    <div class="obra">
+
+        <a href="artes/passaros.html">
+
+            <img src="img/quadros/quadro1.jpg" alt="Noite Estrelada">
+
+            <div class="info">
+
+                <h2>Noite Estrelada</h2>
+
+                <p>Acrílico sobre tela</p>
+
+                <span>Ver obra →</span>
+
+            </div>
+
+        </a>
+
+    </div>
+
+    <div class="obra">
+
+        <a href="artes/jardim.html">
+
+            <img src="img/quadros/quadro2.jpg" alt="Jardim">
+
+            <div class="info">
+
+                <h2>Jardim</h2>
+
+                <p>Aquarela</p>
+
+                <span>Ver obra →</span>
+
+            </div>
+
+        </a>
+
+    </div>
+
+    <div class="obra">
+
+        <a href="artes/abstrato.html">
+
+            <img src="img/quadros/quadro3.jpg">
+
+            <div class="info">
+
+                <h2>Abstrato Azul</h2>
+
+                <p>Óleo sobre tela</p>
+
+                <span>Ver obra →</span>
+
+            </div>
+
+        </a>
+
+    </div>
+
+    <div class="obra">
+
+        <a href="artes/cidade.html">
+
+            <img src="img/quadros/quadro4.jpg">
+
+            <div class="info">
+
+                <h2>Cidade Antiga</h2>
+
+                <p>Acrílico</p>
+
+                <span>Ver obra →</span>
+
+            </div>
+
+        </a>
+
+    </div>
+-->
+</main>
+
+
+
+
+
+<footer>
+
+    <p>© 2026 Todos os direitos reservados.</p>
+
+</footer>
+
+</body>
+</html>

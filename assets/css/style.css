@@ -1,0 +1,772 @@
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    body{
+
+        font-family:'Cormorant Garamond',serif;
+        background:#f9f6f1;
+        color:#333;
+
+    }
+
+header{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(10px);
+
+    z-index:999;
+
+}
+
+.logo{
+
+    font-size:34px;
+    letter-spacing:2px;
+    white-space:nowrap;
+
+}
+
+nav{
+
+    display:flex;
+    align-items:center;
+    gap:35px;
+    flex-wrap:wrap;
+
+}
+
+nav a{
+
+    text-decoration:none;
+    color:#222;
+    font-size:20px;
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#b38b4d;
+
+}
+    .logo{
+
+        font-size:34px;
+        letter-spacing:2px;
+
+    }
+
+    nav{
+
+        display:flex;
+        gap:40px;
+
+    }
+
+    nav a{
+
+        text-decoration:none;
+        color:#222;
+        font-size:20px;
+
+        transition:.3s;
+
+    }
+
+    nav a:hover{
+
+        color:#b38b4d;
+
+    }
+
+    .hero{
+
+        position:relative;
+
+        width:100%;
+        height:100vh;
+
+        overflow:hidden;
+
+    }
+
+    .hero video{
+
+        position:absolute;
+
+        width:100%;
+        height:100%;
+
+        object-fit:cover;
+
+    }
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(33, 25, 18, 0.541);
+    }
+
+    .hero-content{
+
+        position:relative;
+
+        z-index:2;
+
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+
+        text-align:center;
+
+        color:#fff;
+
+        height:100%;
+
+        padding:20px;
+
+    }
+
+    .hero h1{
+
+        font-size:70px;
+        font-weight:500;
+
+    }
+
+    .hero p{
+
+        margin:30px auto;
+
+        max-width:700px;
+
+        font-size:24px;
+
+    }
+
+    .btn{
+
+        padding:16px 40px;
+
+        border:1px solid white;
+
+        text-decoration:none;
+
+        color:white;
+
+        transition:.4s;
+
+    }
+
+    .btn:hover{
+
+        background:white;
+
+        color:black;
+
+    }
+
+    .apresentacao{
+
+        padding:100px 10%;
+
+        text-align:center;
+
+    }
+
+    .apresentacao h2{
+
+        font-size:48px;
+
+        margin-bottom:30px;
+
+    }
+
+    .apresentacao p{
+
+        font-size:24px;
+
+        max-width:800px;
+
+        margin:auto;
+
+        line-height:1.7;
+
+    }
+
+    footer{
+
+        background:#222;
+
+        color:white;
+
+        text-align:center;
+
+        padding:30px;
+
+    }.sobre{
+
+    max-width:1300px;
+
+    margin:180px auto 100px;
+
+    padding:0 60px;
+
+    display:grid;
+
+    grid-template-columns:450px 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.sobre-foto img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:6px;
+
+}
+
+.sobre-texto h1{
+
+    font-size:60px;
+
+    font-weight:500;
+
+    margin-bottom:35px;
+
+}
+
+.sobre-texto p{
+
+    font-size:24px;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+    text-align:justify;
+
+}
+.contato{
+
+    max-width:700px;
+
+    margin:180px auto 100px;
+
+    padding:0 30px;
+
+}
+
+.contato h1{
+
+    font-size:58px;
+
+    font-weight:500;
+
+    margin-bottom:15px;
+
+    text-align:center;
+
+}
+
+.contato p{
+
+    text-align:center;
+
+    font-size:22px;
+
+    margin-bottom:50px;
+
+}
+
+.contato form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.contato label{
+
+    font-size:22px;
+
+}
+
+.contato input,
+.contato select,
+.contato textarea{
+
+    width:100%;
+
+    padding:16px;
+
+    border:1px solid #cfcfcf;
+
+    font-size:18px;
+
+    font-family:inherit;
+
+    background:white;
+
+}
+
+.contato textarea{
+
+    resize:vertical;
+
+    min-height:180px;
+
+}
+
+.contato button{
+
+    margin-top:15px;
+
+    padding:18px;
+
+    border:none;
+
+    background:#222;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.contato button:hover{
+
+    background:#8f6b3d;
+
+}
+
+.orcamento{
+
+    display:none;
+
+    margin-top:10px;
+
+    padding:25px;
+
+    background:#f3eee6;
+
+    border-left:4px solid #8f6b3d;
+
+}
+
+@media(max-width:900px){
+
+.contato{
+
+    margin-top:170px;
+
+}
+
+.contato h1{
+
+    font-size:42px;
+
+}
+
+.contato p{
+
+    font-size:19px;
+
+}
+
+.contato label{
+
+    font-size:20px;
+
+}
+
+}
+@media(max-width:900px){
+
+    .sobre{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+        padding:0 25px;
+
+        margin-top:170px;
+
+    }
+
+    .sobre-foto{
+
+        max-width:350px;
+
+        margin:auto;
+
+    }
+
+    .sobre-texto h1{
+
+        font-size:42px;
+
+        text-align:center;
+
+    }
+
+    .sobre-texto p{
+
+        font-size:20px;
+
+    }
+
+}
+    .catalogo{
+
+        max-width:1500px;
+
+        margin:140px auto 80px;
+
+        padding:0 40px;
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:60px;
+
+    }
+
+    .obra{
+
+        overflow:hidden;
+
+    }
+
+    .obra a{
+
+        text-decoration:none;
+
+        color:#222;
+
+    }
+
+    .obra img{
+
+        width:100%;
+
+        height:650px;
+
+        object-fit:cover;
+
+        transition:.5s;
+
+        display:block;
+
+    }
+
+    .obra:hover img{
+
+        transform:scale(1.03);
+
+    }
+
+    .info{
+
+        padding:25px 10px;
+
+    }
+
+    .info h2{
+
+        font-size:38px;
+
+        font-weight:400;
+
+        margin-bottom:10px;
+
+    }
+
+    .info p{
+
+        font-size:22px;
+
+        color:#666;
+
+        margin-bottom:20px;
+
+    }
+
+    .info span{
+
+        font-size:20px;
+
+        color:#9b7b42;
+
+    }
+    .galeria{
+
+        max-width:1500px;
+
+        margin:150px auto 80px;
+
+        padding:0 40px;
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:30px;
+
+    }
+
+    .galeria img{
+
+        width:100%;
+
+        height:820px;
+
+        object-fit:cover;
+
+        cursor:pointer;
+
+        transition:.4s;
+
+    }
+
+    .galeria img:hover{
+
+        transform:scale(1.02);
+
+        opacity:.9;
+
+    }
+
+    /* Lightbox */
+
+    .lightbox{
+
+        position:fixed;
+
+        inset:0;
+
+        background:rgba(0,0,0,.95);
+
+        display:none;
+
+        justify-content:center;
+
+        align-items:center;
+
+        z-index:9999;
+
+    }
+
+    .lightbox img{
+
+        max-width:90%;
+
+        max-height:90%;
+
+        object-fit:contain;
+
+    }
+
+    .fechar{
+
+        position:absolute;
+
+        top:30px;
+
+        right:50px;
+
+        color:white;
+
+        font-size:60px;
+
+        cursor:pointer;
+
+        font-family:Arial;
+
+    }
+    .titulo{
+
+        text-align:left;
+    padding:0px 13%;
+        margin-top:100px;
+
+    }@media(max-width:900px){
+
+header{
+
+    position:fixed;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    gap:15px;
+
+    padding:15px;
+
+}
+
+.logo{
+
+    font-size:28px;
+
+}
+
+nav{
+
+    width:100%;
+
+    justify-content:center;
+
+    gap:12px 18px;
+
+}
+
+nav a{
+
+    font-size:17px;
+
+}
+
+.hero{
+
+    margin-top:115px;
+    height:75vh;
+
+}
+
+.hero h1{
+
+    font-size:36px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+    max-width:90%;
+
+}
+
+.galeria{
+
+    grid-template-columns:1fr;
+    padding:0 20px;
+    margin-top:70px;
+
+}
+
+.galeria img{
+
+    height:420px;
+
+}
+
+.apresentacao{
+
+    padding:70px 30px;
+
+}
+
+.apresentacao h2{
+
+    font-size:38px;
+
+}
+
+.apresentacao p{
+
+    font-size:20px;
+
+}
+
+.titulo{
+
+    padding:0 20px;
+
+}
+
+}
+    @media(max-width:900px){
+
+    .galeria{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .galeria img{
+
+        height:450px;
+
+    }
+
+    }
+    @media(max-width:900px){
+
+    .catalogo{
+        
+
+        grid-template-columns:1fr;
+
+    }
+
+    .hero h1{
+
+        font-size:20px;
+        font-weight:500;
+
+    }
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 90vh;
+        overflow: hidden;
+    }
+    .obra img{
+
+        height:500px;
+
+    }
+    .hero p{
+
+        margin:30px auto;
+
+        max-width:700px;
+
+        font-size:16px;
+
+    }
+
+    }
