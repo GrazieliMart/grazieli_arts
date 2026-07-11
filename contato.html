@@ -51,16 +51,16 @@
         Ficarei feliz em responder suas dúvidas <br>ou conversar sobre uma futura obra
     </p>
 
-    <form>
+    <form name="contact" netlify>
 
         <label>Nome *</label>
-        <input type="text" required>
+        <input type="text" required name="name" >
 
         <label>E-mail (opcional)</label>
-        <input type="email">
+        <input type="email" name="email">
 
         <label>WhatsApp *</label>
-        <input type="tel" required>
+        <input type="tel" required name="whatsapp">
 
         <label>Estou entrando em contato pois busco:</label>
 
@@ -81,29 +81,30 @@
             <input
                 type="text"
                 placeholder="Ex.: 40x60 cm, 80x120 cm, ainda não sei..."
+                name="tamanho-da-tela"
             >
 
             <label>Você deseja uma pintura utilizando:</label>
 
-            <select>
+            <select name="tinta">
 
-                <option>Selecione</option>
+                <option >Selecione</option>
 
-                <option>Tinta a óleo</option>
+                <option  name="tinta-oleo">Tinta a óleo</option>
 
-                <option>Tinta acrílica</option>
+                <option name="tinta-acrilica">Tinta acrílica</option>
 
-                <option>Aquarela</option>
+                <option name="tinta-aquarela">Tinta aquarela    </option>
 
-                <option>Ainda não sei</option>
+                <option name="ainda-nao-sei">Ainda não sei</option>
 
             </select>
 
         </div>
 
-        <label>Mensagem</label>
+        <label >Mensagem</label>
 
-        <textarea rows="7"></textarea>
+        <textarea rows="7" name="message"></textarea>
 
         <button type="submit">
             Enviar
