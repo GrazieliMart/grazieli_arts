@@ -41,7 +41,7 @@ const obrasDisponiveis = [
         link: "/obra-grazieli-maca.html"
     },
     {
-        nome: "Relíquia | Óleo sobre tela",
+        nome: "Relíquia | Óleo sobre papel",
         img: "/assets/imgs/obras/reliquia (3).webp",
         alt: "Pintura a óleo a venda | Tela à óleo | Obra de arte original | Pintura de realista em óleo",
         link: "/obra-grazieli-reliquia.html"
