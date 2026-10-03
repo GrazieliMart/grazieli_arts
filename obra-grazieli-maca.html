@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/imgs/favicon.ico" type="image/x-icon">
+    <title>Pintura a Óleo | Grazieli | Pintura a óleo a venda</title>
+    <meta name="description" content="Pintura a Óleo - pintura a óleo a venda com moldura. Obra original de Grazieli.">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ====== PÁGINA DA OBRA ====== */
+        .obra-pagina {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: 'Cormorant Garamond', serif;
+        }.obra-fotos img {
+    cursor: zoom-in;
+}
+
+        .obra-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        /* Fotos à esquerda, uma embaixo da outra */
+        .obra-fotos {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .obra-fotos img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Informações à direita (acompanham a rolagem) */
+        .obra-info {
+            position: sticky;
+            top: 110px;
+        }
+
+        .obra-info h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            line-height: 1.1;
+            margin: 0 0 24px;
+        }
+
+        .obra-dados {
+            margin: 0;
+        }
+
+        .obra-dados div {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        }
+
+        .obra-dados dt {
+            font-size: 0.95rem;
+            font-weight: 400;
+            opacity: 0.65;
+        }
+
+        .obra-dados dd {
+            margin: 2px 0 0;
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        .obra-linha {
+            border: 0;
+            border-top: 1px solid currentColor;
+            opacity: 0.35;
+            margin: 32px 0 20px;
+        }
+
+        .obra-texto p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* ====== OUTRAS OBRAS (SLIDER) ====== */
+        .outras-obras {
+            max-width: 1200px;
+            margin: 70px auto 40px;
+            padding: 0 20px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .outras-topo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .outras-topo h2 {
+            font-size: 2rem;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .slider-botoes button {
+            width: 42px;
+            height: 42px;
+            border: 1px solid currentColor;
+            border-radius: 50%;
+            background: transparent;
+            color: inherit;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .slider-botoes button:hover {
+            background: #222;
+            color: #fff;
+        }
+
+        .slider-botoes button:focus-visible,
+        .slider-item:focus-visible {
+            outline: 2px solid currentColor;
+            outline-offset: 3px;
+        }
+
+        .slider-trilho {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding-bottom: 12px;
+            scrollbar-width: thin;
+        }
+
+        .slider-item {
+            flex: 0 0 240px;
+            scroll-snap-align: start;
+            text-decoration: none;
+            color: inherit;
+            text-align: center;
+        }
+
+        .slider-item img {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .slider-item span {
+            display: block;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 800px) {
+            .obra-layout {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .obra-info {
+                position: static;
+            }
+
+            .obra-info h1 {
+                font-size: 2rem;
+            }
+
+            .slider-item {
+                flex-basis: 180px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .slider-trilho {
+                scroll-behavior: auto;
+            }
+        }
+    </style>
+       <script src="assets/js/site.js" defer></script>
+</head>
+<body>
+
+
+
+<div id="header"></div>
+
+
+<main class="obra-pagina">
+<br>
+<br><br>
+<br>
+    <div class="obra-layout">
+
+        <!-- FOTOS (esquerda) - copie/cole um <img> para cada foto -->
+        <div class="obra-fotos">
+            <img src="./assets/imgs/obras/maca (2).webp" alt="Pintura a óleo a venda | Pintura realista à Oleo - Quadro pintado a mão com tinta óleo a venda">
+            <img src="./assets/imgs/obras/maca (1).webp" alt="Pintura a óleo a venda | Pintura realista à Oleo - Quadro pintado a mão com tinta óleo a venda">
+            <img src="./assets/imgs/obras/maca (3).webp" alt="Pintura a óleo a venda | Pintura realista à Oleo - Quadro pintado a mão com tinta óleo a venda">
+        </div>
+
+        <!-- INFORMAÇÕES (direita) -->
+        <div class="obra-info">
+            <h1>Nome da obra: Maçã</h1>
+
+            <dl class="obra-dados"> 
+                    <div>
+                    <dt>Valor</dt>
+                    <dd>R$ 330,00</dd>
+                </div>
+                 <div>
+                    <dt>Material</dt>
+                    <dd>Óleo sobre papel</dd>
+                </div>
+                <div>
+                    <dt>Tamanho</dt>
+                    <dd>10 x 15 cm</dd>
+                </div>
+              
+                <div>
+                    <dt>Data de criação</dt>
+                    <dd>2026</dd>
+                </div>
+                <div>
+                    <dt>Acompanha moldura?</dt>
+                    <dd>Sim, moldura dourada fixada na tela, não sendo possível removê-la.</dd>
+                </div>
+
+            </dl>
+
+            <hr class="obra-linha">
+
+            <div class="obra-texto">
+                <p>
+                   Obra criada com tinta óleo sobre papel, representando uma maçã vermelha em estilo realista. 
+                    <br> <br>
+            A obra faz parte do desafio de desenho de 31 dias, chamado <i>Inktober</i>, que consiste em criar uma obra por dia durante o mês de outubro, seguindo um tema específico. 
+            
+            A obra foi criada sob o tema de "Maçã".
+            
+                </p>
+            </div>
+            <div id="como-comprar"></div>
+        </div>
+
+    </div>
+
+</main>
+
+<div id="outras-obras"></div>
+<div id="lightbox"></div>
+
+<div id="footer"></div>
+
+
+
+</body>
+</html>
