@@ -242,6 +242,37 @@ document.addEventListener("DOMContentLoaded", () => {
     const slider = document.getElementById("outras-obras");
     if (slider) montarSlider(slider);
 
+    // Preço em dólar quando o idioma escolhido é inglês
+    // Uso: <dd class="preco notranslate" data-usd="US$ 65.00">R$ 330,00</dd>
+    const precos = document.querySelectorAll(".preco[data-usd]");
+    if (precos.length) {
+        precos.forEach(p => { if (!p.dataset.brl) p.dataset.brl = p.textContent.trim(); });
+
+        const emIngles = () =>
+            /googtrans=\/[^\/;]+\/en/.test(document.cookie) ||
+            document.documentElement.classList.contains("translated-ltr") ||
+            document.documentElement.lang.toLowerCase().startsWith("en");
+
+        const atualizarPreco = () => {
+            const ingles = emIngles();
+            precos.forEach(p => { p.textContent = ingles ? p.dataset.usd : p.dataset.brl; });
+        };
+
+        atualizarPreco();
+
+        // O tradutor muda a classe/lang do <html> quando troca de idioma
+        new MutationObserver(atualizarPreco)
+            .observe(document.documentElement, { attributes: true, attributeFilter: ["class", "lang"] });
+
+        // Reforço: confere de novo logo após clicar nas bandeiras
+        document.addEventListener("click", e => {
+            if (e.target.closest(".gtranslate_wrapper")) {
+                setTimeout(atualizarPreco, 500);
+                setTimeout(atualizarPreco, 1500);
+            }
+        });
+    }
+
     // Lightbox
     const lightbox = document.getElementById("lightbox");
     if (lightbox) {
